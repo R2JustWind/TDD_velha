@@ -20,12 +20,21 @@ TEST_CASE( "Testa velha", "[single-file]" ) {
 
 } 
 
-TEST_CASE( "Vitória do Jogador 1 (linha meio)", "[single-file]" ) {
+TEST_CASE( "Vitória do Jogador 1 (coluna meio)", "[single-file]" ) {
 	int teste2[3][3]= {   { 2, 1, 0 }, 
 	                      { 2, 1, 0 },
 						  { 0, 1, 2 }
 					  };
     REQUIRE( VerificaVelha(teste2) == 1 );
+
+} 
+
+TEST_CASE( "Vitória do Jogardor 1 (coluna esquerda)", "[single-file]" ) {
+	int teste3[3][3]= {   { 1, 0, 2 }, 
+	                      { 1, 0, 0 },
+						  { 1, 2, 2 }
+					  };
+    REQUIRE( VerificaVelha(teste3) == 1 );
 
 } 
  
