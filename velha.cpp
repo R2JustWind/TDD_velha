@@ -40,6 +40,9 @@ int VerificaVelha(int velha[3][3]) {
         velha[2][0] == 1) {
         return 1;
     }
+	if (velha[0][0] == velha [0][1] && velha[0][1] == velha[0][2] && velha[0][2] == 2){
+		return 2;
+	}
 
     return 0; /*!< retorna zero para teste */
 }
