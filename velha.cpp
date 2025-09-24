@@ -1,9 +1,11 @@
+// Copyright 2025 Arthur Soares 
+
 /**
  * \file  velha.cpp
  */
 
  
-#include "velha.hpp"
+#include "/Users/arthur/TDD_velha/velha.hpp"
 
 /** 
  * @brief verifica situacao do jogo da velha  
@@ -17,14 +19,10 @@
 
 int VerificaVelha( int velha[3][3] )
 {
-	if(velha[0][2] == 1 && velha[1][2] == 1 && velha[2][2] == 1){
-		return 1; /*!< retorna 1 para vitória do jogador 1 */
-	}
-	if(velha[0][1] == 1 && velha[1][1] == 1 && velha[2][1] == 1){
-		return 1; /*!< retorna 1 para vitória do jogador 1 */
-	}
-	if(velha[0][0] == 1 && velha[1][0] == 1 && velha[2][0] == 1){
-		return 1; /*!< retorna 1 para vitória do jogador 1 */
+	for(int i = 0; i < 3; i++){
+		if(velha[0][i] == velha[1][i] && velha[1][i] == velha [2][i] && velha[2][i] == 1){
+			return 1; /*!< retorna 1 para vitória do jogador 1 */
+		}
 	}
 	return 0; /*!< retorna zero para teste */ 
 }
