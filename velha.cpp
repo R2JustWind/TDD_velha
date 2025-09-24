@@ -1,10 +1,10 @@
-// Copyright 2025 Arthur Soares 
+// Copyright 2025 Arthur Soares
 
 /**
  * \file  velha.cpp
  */
 
- 
+
 #include "/Users/arthur/TDD_velha/velha.hpp"
 
 /** 
@@ -17,14 +17,12 @@
  *  -1 para inváido e -2 para jogos impossíveis.
  */ 
 
-int VerificaVelha( int velha[3][3] )
-{
-	for(int i = 0; i < 3; i++){
-		if(velha[0][i] == velha[1][i] && velha[1][i] == velha [2][i] && velha[2][i] == 1){
-			return 1; /*!< retorna 1 para vitória do jogador 1 */
-		}
-	}
-	return 0; /*!< retorna zero para teste */ 
+int VerificaVelha(int velha[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        if (velha[0][i] == velha[1][i] && velha[1][i] == velha[2][i] &&
+            velha[2][i] == 1) {
+            return 1; /*!< retorna 1 para vitória do jogador 1 */
+        }
+    }
+    return 0; /*!< retorna zero para teste */
 }
-
-
