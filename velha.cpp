@@ -24,5 +24,8 @@ int VerificaVelha(int velha[3][3]) {
             return 1; /*!< retorna 1 para vitória do jogador 1 */
         }
     }
+    if (velha[0][0] == velha[0][1] && velha[0][1] == velha[0][2] && velha[0][2] == 1) {
+        return 1;
+    }
     return 0; /*!< retorna zero para teste */
 }
