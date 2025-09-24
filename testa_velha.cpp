@@ -83,3 +83,11 @@ TEST_CASE("Vitória do Jogardor 2 (coluna direita)", "[single-file]") {
                       };
     REQUIRE(VerificaVelha(teste9) == 2);
 }
+
+TEST_CASE("Vitória do Jogardor 2 (coluna do meio)", "[single-file]") {
+    int teste10[3][3]= {  { 1, 2, 1 },
+                          { 0, 2, 1 },
+                          { 1, 2, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste10) == 2);
+}
