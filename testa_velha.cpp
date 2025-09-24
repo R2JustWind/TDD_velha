@@ -4,11 +4,11 @@
  * \file testa_velha.cpp
  */
 
-#include "/Users/arthur/TDD_velha/velha.hpp"
+#include "velha.hpp"
 
 #define CATCH_CONFIG_MAIN
 #define CATCH_CONFIG_NO_POSIX_SIGNALS
-#include "/Users/arthur/TDD_velha/catch.hpp"
+#include "catch.hpp"
 
 
 
@@ -34,4 +34,12 @@ TEST_CASE("Vitória do Jogardor 1 (coluna esquerda)", "[single-file]") {
                           { 1, 2, 2 }
                       };
     REQUIRE(VerificaVelha(teste3) == 1);
+}
+
+TEST_CASE("Vitória do Jogardor 1 (linha superior)", "[single-file]") {
+    int teste4[3][3]= {   { 1, 1, 1 },
+                          { 1, 2, 0 },
+                          { 0, 2, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste4) == 1);
 }

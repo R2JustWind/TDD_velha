@@ -5,7 +5,7 @@
  */
 
 
-#include "/Users/arthur/TDD_velha/velha.hpp"
+#include "velha.hpp"
 
 /** 
  * @brief verifica situacao do jogo da velha  
