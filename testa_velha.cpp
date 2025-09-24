@@ -139,3 +139,11 @@ TEST_CASE("Vitória do Jogardor 2 (diagonal 2)", "[single-file]") {
                       };
     REQUIRE(VerificaVelha(teste16) == 2);
 }
+
+TEST_CASE("Caso inválido (todas as casas são X)", "[single-file]") {
+    int teste17[3][3]= {  { 1, 1, 1 },
+                          { 1, 1, 1 },
+                          { 1, 1, 1 }
+                      };
+    REQUIRE(VerificaVelha(teste17) == -2);
+}
