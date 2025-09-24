@@ -18,6 +18,14 @@ TEST_CASE( "Testa velha", "[single-file]" ) {
 					  };
     REQUIRE( VerificaVelha(teste1) == 1 );
 
+} 
+
+TEST_CASE( "Vitória do Jogador 1 (linha meio)", "[single-file]" ) {
+	int teste2[3][3]= {   { 2, 1, 0 }, 
+	                      { 2, 1, 0 },
+						  { 0, 1, 2 }
+					  };
+    REQUIRE( VerificaVelha(teste2) == 1 );
 
 } 
  
