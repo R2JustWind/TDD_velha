@@ -53,9 +53,17 @@ TEST_CASE("Vitória do Jogardor 1 (linha do meio)", "[single-file]") {
 }
 
 TEST_CASE("Vitória do Jogardor 1 (linha do inferior)", "[single-file]") {
-    int teste5[3][3]= {   { 1, 2, 0 },
+    int teste6[3][3]= {   { 1, 2, 0 },
                           { 0, 2, 2 },
                           { 1, 1, 1 }
                       };
-    REQUIRE(VerificaVelha(teste5) == 1);
+    REQUIRE(VerificaVelha(teste6) == 1);
+}
+
+TEST_CASE("Vitória do Jogardor 1 (diagonal 1)", "[single-file]") {
+    int teste7[3][3]= {   { 1, 2, 2 },
+                          { 0, 1, 2 },
+                          { 1, 0, 1 }
+                      };
+    REQUIRE(VerificaVelha(teste7) == 1);
 }
