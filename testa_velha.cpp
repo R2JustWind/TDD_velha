@@ -219,3 +219,11 @@ TEST_CASE("Caso indefinido (2 pode vencer na diagonal e 1 na vertical)", "[singl
                       };
     REQUIRE(VerificaVelha(teste26) == -1);
 }
+
+TEST_CASE("Caso indefinido (1 pode vencer na diagonal)", "[single-file]") {
+    int teste26[3][3]= {  { 0, 1, 2 },
+                          { 1, 1, 2 },
+                          { 2, 2, 1 }
+                      };
+    REQUIRE(VerificaVelha(teste26) == -1);
+}
