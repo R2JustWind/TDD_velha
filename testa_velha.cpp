@@ -4,11 +4,11 @@
  * \file testa_velha.cpp
  */
 
-#include "velha.hpp"
+#include "/Users/arthur/TDD_velha/velha.hpp"
 
 #define CATCH_CONFIG_MAIN
 #define CATCH_CONFIG_NO_POSIX_SIGNALS
-#include "catch.hpp"
+#include "/Users/arthur/TDD_velha/catch.hpp"
 
 
 
@@ -164,7 +164,7 @@ TEST_CASE("Caso inválido (ambos os jogadores ganham)", "[single-file]") {
     REQUIRE(VerificaVelha(teste19) == -2);
 }
 
-TEST_CASE("Caso indefinido (nenhuma casa se encontra preenchida)", "[single-file]") {
+TEST_CASE("Caso indefinido (nenhuma casa preenchida)", "[single-file]") {
     int teste20[3][3]= {  { 0, 0, 0 },
                           { 0, 0, 0 },
                           { 0, 0, 0 }
@@ -172,7 +172,7 @@ TEST_CASE("Caso indefinido (nenhuma casa se encontra preenchida)", "[single-file
     REQUIRE(VerificaVelha(teste20) == -1);
 }
 
-TEST_CASE("Caso indefinido (Ainda restam casas a se preencher)", "[single-file]") {
+TEST_CASE("Caso indefinido (Restam casas a se preencher)", "[single-file]") {
     int teste21[3][3]= {  { 0, 2, 0 },
                           { 0, 1, 2 },
                           { 1, 0, 2 }
@@ -180,7 +180,7 @@ TEST_CASE("Caso indefinido (Ainda restam casas a se preencher)", "[single-file]"
     REQUIRE(VerificaVelha(teste21) == -1);
 }
 
-TEST_CASE("Caso inválido (Quantidade de x's muito superior a de o's)", "[single-file]") {
+TEST_CASE("Caso inválido (Quantidade de x superior a o)", "[single-file]") {
     int teste22[3][3]= {  { 1, 1, 1 },
                           { 0, 1, 2 },
                           { 1, 0, 2 }
@@ -204,7 +204,7 @@ TEST_CASE("Empate (Tudo preenchido, sem ganhador)", "[single-file]") {
     REQUIRE(VerificaVelha(teste24) == 0);
 }
 
-TEST_CASE("Empate (Independente das jogadas, nenhum pode ganhar)", "[single-file]") {
+TEST_CASE("Empate (Nenhum pode ganhar)", "[single-file]") {
     int teste25[3][3]= {  { 0, 2, 1 },
                           { 1, 1, 2 },
                           { 2, 1, 2 }
@@ -212,7 +212,7 @@ TEST_CASE("Empate (Independente das jogadas, nenhum pode ganhar)", "[single-file
     REQUIRE(VerificaVelha(teste25) == 0);
 }
 
-TEST_CASE("Caso indefinido (2 pode vencer na diagonal e 1 na vertical)", "[single-file]") {
+TEST_CASE("Caso indefinido (Ambos podem vencer)", "[single-file]") {
     int teste26[3][3]= {  { 0, 1, 2 },
                           { 1, 2, 1 },
                           { 1, 2, 2 }
