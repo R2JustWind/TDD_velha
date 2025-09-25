@@ -73,6 +73,9 @@ int VerificaVelha(int velha[3][3]) {
         velha[2][0] == 2) {
         return 2;
     }
+	if (X_counter + O_counter != 9) {
+		return -1; /*!< retorna -1 para jogos inválidos */
+	}
 
     return 0; /*!< retorna zero para teste */
 }
