@@ -47,6 +47,8 @@ int VerificaVelha(int velha[3][3]) {
     }
 	if (X_counter > O_counter + 1) {
 		return -2; /*!< retorna -2 para jogos impossíveis */
+	}else if (O_counter > X_counter + 1) {
+		return -2; /*!< retorna -2 para jogos impossíveis */
 	}
 	if (X_win) {
 		return 1; /*!< retorna 1 para vitória do jogador 1 */
