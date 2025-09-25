@@ -187,3 +187,11 @@ TEST_CASE("Caso inválido (Quantidade de x's muito superior a de o's)", "[single
                       };
     REQUIRE(VerificaVelha(teste22) == -2);
 }
+
+TEST_CASE("Caso indefinido (Qualquer um ainda pode ganhar)", "[single-file]") {
+    int teste23[3][3]= {  { 1, 1, 0 },
+                          { 1, 2, 0 },
+                          { 2, 2, 0 }
+                      };
+    REQUIRE(VerificaVelha(teste23) == -1);
+}
