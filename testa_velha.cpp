@@ -203,3 +203,11 @@ TEST_CASE("Empate (Tudo preenchido, sem ganhador)", "[single-file]") {
                       };
     REQUIRE(VerificaVelha(teste24) == 0);
 }
+
+TEST_CASE("Empate (Independente das jogadas, nenhum pode ganhar)", "[single-file]") {
+    int teste25[3][3]= {  { 0, 2, 1 },
+                          { 1, 1, 2 },
+                          { 2, 1, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste25) == 0);
+}
