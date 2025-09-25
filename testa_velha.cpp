@@ -211,3 +211,11 @@ TEST_CASE("Empate (Independente das jogadas, nenhum pode ganhar)", "[single-file
                       };
     REQUIRE(VerificaVelha(teste25) == 0);
 }
+
+TEST_CASE("Caso indefinido (2 pode vencer na diagonal e 1 na vertical)", "[single-file]") {
+    int teste26[3][3]= {  { 0, 1, 2 },
+                          { 1, 2, 1 },
+                          { 1, 2, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste26) == -1);
+}
