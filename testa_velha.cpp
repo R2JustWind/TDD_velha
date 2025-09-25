@@ -171,3 +171,11 @@ TEST_CASE("Caso indefinido (nenhuma casa se encontra preenchida)", "[single-file
                       };
     REQUIRE(VerificaVelha(teste20) == -1);
 }
+
+TEST_CASE("Caso indefinido (Ainda restam casas a se preencher)", "[single-file]") {
+    int teste21[3][3]= {  { 0, 2, 0 },
+                          { 0, 1, 2 },
+                          { 1, 0, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste21) == -1);
+}
