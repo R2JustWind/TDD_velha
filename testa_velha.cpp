@@ -179,3 +179,11 @@ TEST_CASE("Caso indefinido (Ainda restam casas a se preencher)", "[single-file]"
                       };
     REQUIRE(VerificaVelha(teste21) == -1);
 }
+
+TEST_CASE("Caso inválido (Quantidade de x's muito superior a de o's)", "[single-file]") {
+    int teste22[3][3]= {  { 1, 1, 1 },
+                          { 0, 1, 2 },
+                          { 1, 0, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste22) == -2);
+}
