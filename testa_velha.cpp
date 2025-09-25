@@ -163,3 +163,11 @@ TEST_CASE("Caso inválido (ambos os jogadores ganham)", "[single-file]") {
                       };
     REQUIRE(VerificaVelha(teste19) == -2);
 }
+
+TEST_CASE("Caso indefinido (nenhuma casa se encontra preenchida)", "[single-file]") {
+    int teste20[3][3]= {  { 0, 0, 0 },
+                          { 0, 0, 0 },
+                          { 0, 0, 0 }
+                      };
+    REQUIRE(VerificaVelha(teste20) == -1);
+}
