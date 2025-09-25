@@ -147,3 +147,11 @@ TEST_CASE("Caso inválido (todas as casas são X)", "[single-file]") {
                       };
     REQUIRE(VerificaVelha(teste17) == -2);
 }
+
+TEST_CASE("Caso inválido (todas as casas são O)", "[single-file]") {
+    int teste18[3][3]= {  { 2, 2, 2 },
+                          { 2, 2, 2 },
+                          { 2, 2, 2 }
+                      };
+    REQUIRE(VerificaVelha(teste18) == -2);
+}
