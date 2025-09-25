@@ -50,10 +50,11 @@ int VerificaVelha(int velha[3][3]) {
 	}else if (O_counter > X_counter + 1) {
 		return -2; /*!< retorna -2 para jogos impossíveis */
 	}
-	if (X_win) {
+    if (X_win && O_win) {
+        return -2; /*!< retorna -2 para jogos impossíveis */
+    }else if (X_win) {
 		return 1; /*!< retorna 1 para vitória do jogador 1 */
-	}
-	if (O_win) {
+	}else if (O_win) {
 		return 2; /*!< retorna 2 para vitória do jogador 2 */
 	}
     if (velha[0][0] == velha[1][1] && velha[1][1] == velha[2][2] &&
