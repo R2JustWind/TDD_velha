@@ -18,24 +18,42 @@
  */ 
 
 int VerificaVelha(int velha[3][3]) {
+    int X_counter = 0, O_counter = 0;
+	bool X_win = false, O_win = false;
     for (int i = 0; i < 3; i++) {
         if (velha[0][i] == velha[1][i] && velha[1][i] == velha[2][i] &&
             velha[2][i] == 1) {
-                return 1; /*!< retorna 1 para vitória do jogador 1 */
+                X_win = true;; /*!< retorna 1 para vitória do jogador 1 */
         }
         if (velha[0][i] == velha[1][i] && velha[1][i] == velha[2][i] &&
             velha[2][i] == 2) {
-                return 2; /*!< retorna 2 para vitória do jogador 1 */
+                O_win = true; /*!< retorna 2 para vitória do jogador 1 */
         }
         if (velha[i][0] == velha[i][1] && velha[i][1] == velha[i][2] &&
             velha[i][2] == 1) {
-                return 1; /*!< retorna 1 para vitória do jogador 1 */
+                X_win = true; /*!< retorna 1 para vitória do jogador 1 */
         }
         if (velha[i][0] == velha[i][1] && velha[i][1] == velha[i][2] &&
             velha[i][2] == 2) {
-                return 2; /*!< retorna 2 para vitória do jogador 1 */
-        }
+                O_win = true; /*!< retorna 2 para vitória do jogador 1 */
+			}
+        for (int j = 0; j < 3; j++) {
+			if (velha[i][j] == 1) {
+				X_counter++;
+			} else if (velha[i][j] == 2) {
+				O_counter++;
+			}
+		}
     }
+	if (X_counter > O_counter + 1) {
+		return -2; /*!< retorna -2 para jogos impossíveis */
+	}
+	if (X_win) {
+		return 1; /*!< retorna 1 para vitória do jogador 1 */
+	}
+	if (O_win) {
+		return 2; /*!< retorna 2 para vitória do jogador 2 */
+	}
     if (velha[0][0] == velha[1][1] && velha[1][1] == velha[2][2] &&
         velha[2][2] == 1) {
         return 1;
